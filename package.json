@@ -1,6 +1,6 @@
 {
   "name": "iceberg-catalog-nessie",
-  "version": "0.65.1",
+  "version": "0.65.2",
   "description": "OpenAPI client for iceberg-catalog-nessie",
   "author": "OpenAPI-Generator",
   "repository": {
