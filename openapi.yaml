@@ -49,6 +49,11 @@ tags:
   description: "End points from the legacy v1 API, deprecated"
 - name: v2
   description: End points from the Nessie v2 API
+  
+# All routes are currently configured using an Authorization header.
+security:
+  - BearerAuth: []
+  
 paths:
   /v1/config:
     get:
@@ -5264,4 +5269,7 @@ components:
           type: BRANCH
           hash: abcdef4242424242424242424242beef00dead42112233445566778899001122
           name: exampleBranch
-
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
