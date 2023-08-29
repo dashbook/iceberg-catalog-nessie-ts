@@ -111,7 +111,7 @@ export function PutFromJSONTyped(json: any, ignoreDiscriminator: boolean): Put {
         return json;
     }
     return {
-        
+
         'key': ContentKeyFromJSON(json['key']),
         'content': ContentFromJSON(json['content']),
         'expectedContent': !exists(json, 'expectedContent') ? undefined : PutExpectedContentFromJSON(json['expectedContent']),
@@ -128,7 +128,8 @@ export function PutToJSON(value?: Put | null): any {
         return null;
     }
     return {
-        
+
+        'type': "PUT",
         'key': ContentKeyToJSON(value.key),
         'content': ContentToJSON(value.content),
         'expectedContent': PutExpectedContentToJSON(value.expectedContent),

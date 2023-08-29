@@ -55,7 +55,7 @@ export function DeleteFromJSONTyped(json: any, ignoreDiscriminator: boolean): De
         return json;
     }
     return {
-        
+
         'key': ContentKeyFromJSON(json['key']),
     };
 }
@@ -68,7 +68,7 @@ export function DeleteToJSON(value?: Delete | null): any {
         return null;
     }
     return {
-        
+        'type': "DELETE",
         'key': ContentKeyToJSON(value.key),
     };
 }
